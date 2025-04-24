@@ -1,6 +1,22 @@
-# Attendance System Backend
+# AuraCheck  
+**AI Secure Attendance Tracking System**  
 
-A Django-based backend for a Flutter attendance tracking application. This system provides APIs for managing courses, sessions, and attendance records with features like GPS verification and biometric authentication.
+## Project Goals  
+
+### Provide Real-Time Attendance Information  
+- Enable students to view their attendance records instantly through the app.  
+- Display detailed data, such as attendance percentages for each subject.  
+
+### Automate Attendance Input  
+- Eliminate manual attendance entry and minimize errors.  
+
+### User-Friendly Interface  
+- Simple and interactive design.  
+
+### Improve Efficiency, Accuracy, and Enable Anti-Cheat  
+- Enable Prof/TA to open attendance whenever they like (e.g., mid-lecture, at the end of the lecture).  
+- Provide the option to make attendance open for a fixed duration (e.g., 10 minutes, 20 minutes).  
+- Require students to confirm attendance using **GPS and Fingerprint (biometric cryptographic key)**.  
 
 ## Features
 
@@ -85,6 +101,34 @@ The API documentation is available at:
 - `GET /api/notifications/` - List notifications
 - `PUT /api/notifications/<id>/read/` - Mark notification as read
 
+## Team Structure
+
+### Front-End Team Goals  
+
+#### **User Interface**  
+- Layout and design implementation
+- Mobile-friendly responsive design
+
+#### **User Interaction**  
+- Intuitive navigation and controls
+
+### Back-End Team Goals  
+
+#### **Core Features**  
+- Location Tracking Function
+- Biometric Cryptographic Key based on Fingerprint
+- Email Authentication
+- Support front-end interactions
+
+### Database Team Goals  
+
+#### **Structure**  
+- Tables, fields, and relationships
+- Efficient data models
+
+#### **Data Handling and Access**  
+- Efficient storage and retrieval mechanisms
+
 ## Development
 
 ### Running Tests
@@ -95,23 +139,6 @@ python manage.py test
 ### Code Style
 Follow PEP 8 guidelines for Python code style.
 
-## Flutter Integration
-
-The backend is configured with CORS support for Flutter integration. The following settings are important for Flutter developers:
-
-1. Base URL: `http://localhost:8000/api/`
-2. Authentication: Bearer token in Authorization header
-3. Content-Type: application/json
-
-## Security Notes
-
-1. Change `CORS_ALLOW_ALL_ORIGINS` to `False` in production
-2. Configure proper CORS origins
-3. Use environment variables for sensitive data
-4. Enable HTTPS in production
-
 ## License
 
-This project is licensed under the BSD License. 
-
-mkdir -p users/management/commands 
+This project is licensed under the BSD License.
